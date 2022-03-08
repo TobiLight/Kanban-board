@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .kanban-items::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .kanban-board::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .kanban-items::-webkit-scrollbar-track {
+        background: rgb(179, 177, 177);
+        border-radius: 10px;
+    }
+
+    .kanban-board::-webkit-scrollbar-track {
+        background: rgb(179, 177, 177);
+        border-radius: 10px;
+    }
+
+    .kanban-items::-webkit-scrollbar-thumb {
+        background: rgb(0, 0, 0, .3);
+        border-radius: 10px;
+    }
+
+    .kanban-board::-webkit-scrollbar-thumb {
+        background: rgb(0, 0, 0, .3);
+        border-radius: 10px;
+    }
+
+    .kanban-items::-webkit-scrollbar-thumb:hover {
+        background: rgb(100, 100, 100);
+        border-radius: 10px;
+    }
+
+    .kanban-board::-webkit-scrollbar-thumb:hover {
+        background: rgb(100, 100, 100);
+        border-radius: 10px;
+    }
+
+    .kanban-items::-webkit-scrollbar-thumb:active {
+        background: rgb(68, 68, 68);
+        border-radius: 10px;
+    }
+
+    .kanban-board::-webkit-scrollbar-thumb:active {
+        background: rgb(68, 68, 68);
+        border-radius: 10px;
+    }
+
+    .draggable-item {
+        /* @apply bg-[#3d3d3d] rounded w-full; */
+        background-color: brown;
+        @apply rounded w-full
+    }
+
+    .dragover.draggable-item {
+        opacity: .3;
+    }
+
+}
+
+@layer utilities {
+    .kn-bg-site-theme {
+        background-color: #201e20;
+    }
+
+    .kn-h1 {
+        @apply text-2xl text-gray-300 font-bold
+    }
+
+    .dragover {
+        background-color: slategrey;
+    }
+}
